@@ -1,0 +1,37 @@
+﻿<Page x:Class="TMS.CarrierDataMain"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CarrierDataMain">
+
+    <Grid Name="CarrierDataMain_Grid">
+
+        <Label Content="Carrier Data" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" FontSize="30px"/>
+
+        <DataGrid Name="CarrierData_DataGrid" HorizontalAlignment="Center" Height="229" Margin="0,59,0,0" VerticalAlignment="Top" Width="754" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Carrier ID" Binding="{Binding CarrierID}" Width="100" />
+                <DataGridTextColumn Header="Carrier Name" Binding="{Binding CarrierName}" Width="150" />
+                <DataGridTextColumn Header="FTL Availability" Binding="{Binding FTLAvail}" Width="100" />
+                <DataGridTextColumn Header="LTL Availability" Binding="{Binding LTLAvail}" Width="100" />
+                <DataGridTextColumn Header="FTL Rate" Binding="{Binding FTLRate}" Width="100" />
+                <DataGridTextColumn Header="LTL Rate" Binding="{Binding LTLRate}" Width="100" />
+                <DataGridTextColumn Header="Reefer Charge" Binding="{Binding ReeferCharge}" Width="150" />
+                <DataGridTextColumn Header="Depot City" Binding="{Binding DepotCity}" Width="150" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Select a Carrier from the list to either Update/Delete:" HorizontalAlignment="Center" Margin="0,313,0,0" VerticalAlignment="Top"/>
+
+        <ComboBox Name="CarrierData_ComboB" HorizontalAlignment="Center" VerticalAlignment="Top" Width="248" Margin="0,348,0,0" Height="24"/>
+
+        <Button Content="Add Carrier" HorizontalAlignment="Center" Margin="0,404,352,0" VerticalAlignment="Top" Width="96" Height="21" Click="SelectAddCarrier_Click"/>
+        <Button Content="Update Carrier" HorizontalAlignment="Center" Margin="0,404,0,0" VerticalAlignment="Top" Width="96" Height="21" Click="SelectUpdateCarrier_Click"/>
+        <Button Content="Delete Carrier" HorizontalAlignment="Center" Margin="352,404,0,0" VerticalAlignment="Top" Width="96" Height="21" Click="SelectDeleteCarrier_Click"/>
+
+    </Grid>
+</Page>

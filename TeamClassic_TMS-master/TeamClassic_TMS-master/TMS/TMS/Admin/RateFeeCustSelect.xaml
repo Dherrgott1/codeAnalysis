@@ -1,0 +1,30 @@
+﻿<Page x:Class="TMS.RateFeeCustSelect"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RateFeeCustSelect">
+
+    <Grid Name="RateFeeCustSelect_Grid">
+
+        <Label Content="Rate/Fee Table" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" FontSize="30px"/>
+
+        <DataGrid Name="RateFee_DataGrid"  HorizontalAlignment="Center" Height="229" Margin="0,78,0,0" VerticalAlignment="Top" Width="503" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Carrier Name" Binding="{Binding CarrierName}" Width="200" />
+                <DataGridTextColumn Header="FTL Rate" Binding="{Binding FTLRate}" Width="100" />
+                <DataGridTextColumn Header="LTL Rate" Binding="{Binding LTLRate}" Width="100" />
+                <DataGridTextColumn Header="Reefer Charge" Binding="{Binding ReeferCharge}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="Select a carrier to update their rate fee:" HorizontalAlignment="Center" Margin="0,323,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="RateFee_ComboB" HorizontalAlignment="Center" VerticalAlignment="Top" Width="249" Margin="0,355,0,0" Height="24"/>
+
+        <Button Content="Update Rate/Fee" HorizontalAlignment="Center" Margin="0,410,0,0" VerticalAlignment="Top" Width="97" Height="21" Click="SelectUpdateRate_Click"/>
+
+    </Grid>
+</Page>

@@ -1,0 +1,58 @@
+﻿<Page x:Class="TMS.ReviewOrderForm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TMS"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReviewOrderForm">
+
+    <Grid Name="ReviewOrderForm_Grid">
+
+        <Label Content="Review Order" HorizontalAlignment="Center" Margin="0,3,0,0" VerticalAlignment="Top" FontSize="30px"/>
+
+        <Label Content="Start Date:" HorizontalAlignment="Center" Margin="464,73,244,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="StartDate" HorizontalAlignment="Center" IsReadOnly="True" Margin="581,82,40,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Client Name:" HorizontalAlignment="Center" Margin="29,73,659,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="ClientName" HorizontalAlignment="Center" IsReadOnly="True" Margin="160,82,461,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Date Completed:" HorizontalAlignment="Center" Margin="438,123,218,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="CompleteDate" HorizontalAlignment="Center" IsReadOnly="True" Margin="581,132,40,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Job Type:" HorizontalAlignment="Center" Margin="43,123,673,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="JobType" HorizontalAlignment="Center" IsReadOnly="True" Margin="160,132,461,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Quantity:" HorizontalAlignment="Center" Margin="44,173,674,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="Quantity" HorizontalAlignment="Center" IsReadOnly="True" Margin="160,183,461,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Total KM:" HorizontalAlignment="Center" Margin="468,173,248,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="TotalKM" HorizontalAlignment="Center" IsReadOnly="True" Margin="581,183,40,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Destination:" HorizontalAlignment="Center" Margin="33,223,663,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="Destination" HorizontalAlignment="Center" IsReadOnly="True" Margin="160,232,461,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Total Time:" HorizontalAlignment="Center" Margin="462,223,242,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="TotalTime" HorizontalAlignment="Center" IsReadOnly="True" Margin="581,232,40,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Van Type:" HorizontalAlignment="Center" Margin="43,273,673,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="VanType" HorizontalAlignment="Center" IsReadOnly="True" Margin="160,282,461,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="Rate:" HorizontalAlignment="Center" Margin="485,273,265,0" VerticalAlignment="Top" FontSize="18px"/>
+        <TextBox Name="Rate" HorizontalAlignment="Center" IsReadOnly="True" Margin="581,282,40,0" VerticalAlignment="Top" Height="25" TextWrapping="Wrap" Text="" Width="179"/>
+
+        <Label Content="SubTotal:" HorizontalAlignment="Center" Margin="286,324,432,0" VerticalAlignment="Top" FontSize="18px"/>
+        <Label Name="SubTotal" Content="$0.00" HorizontalAlignment="Center" Margin="442,324,306,0" VerticalAlignment="Top" FontSize="18px"/>
+
+        <Label Content="Total:" HorizontalAlignment="Center" Margin="310,354,434,0" VerticalAlignment="Top" FontSize="18px" FontWeight="Bold"/>
+        <Label Name="Total" Content="$0.00" HorizontalAlignment="Center" Margin="440,354,304,0" VerticalAlignment="Top" FontSize="18px" FontWeight="Bold"/>
+
+        <Button Content="Generate Invoice" HorizontalAlignment="Center" Margin="0,410,0,0" VerticalAlignment="Top" Width="157" Height="21" Click="Click_GenerateInvoice">
+            <Button.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="320" Softness="0.3" ShadowDepth="4" Opacity="1" />
+            </Button.BitmapEffect>
+        </Button>
+
+    </Grid>
+</Page>
